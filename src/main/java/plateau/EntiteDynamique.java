@@ -5,10 +5,23 @@
  */
 package plateau;
 
+import deplacements.Direction;
+
 /**
  *
  * @author Epulapp
  */
-public class EntiteDynamique {
+public abstract class EntiteDynamique extends Entite {
+    public EntiteDynamique(Jeu _jeu) {
+        super(_jeu);
+    }
+
+    @Override
+    public boolean peutEtreRamasser(){
+        return false;
+    };
     
+    public boolean vivant=true;
+    
+    public void deplacer(Direction d) {};
 }

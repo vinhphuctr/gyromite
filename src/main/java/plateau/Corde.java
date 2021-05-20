@@ -9,6 +9,13 @@ package plateau;
  *
  * @author Epulapp
  */
-public class Corde {
+public class Corde extends EntiteStatique{
+    public Corde(Jeu _jeu) { 
+        super(_jeu);
+    }
     
+    @Override
+    public boolean traversable() {
+        return true;
+    }
 }

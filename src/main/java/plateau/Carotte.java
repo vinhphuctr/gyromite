@@ -9,6 +9,19 @@ package plateau;
  *
  * @author Epulapp
  */
-public class Carotte {
+public class Carotte extends EntiteStatique {
+
+    public Carotte(Jeu _jeu) { 
+        super(_jeu);
+    }
+
+    @Override
+    public boolean traversable(){
+        return true;
+    }
     
+    @Override
+    public boolean peutEtreRamasser() {
+        return true;
+    }
 }

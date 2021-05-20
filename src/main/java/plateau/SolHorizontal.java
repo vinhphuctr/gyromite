@@ -9,6 +9,13 @@ package plateau;
  *
  * @author Epulapp
  */
-public class SolHorizontal {
+public class SolHorizontal extends EntiteStatique{
+    public SolHorizontal(Jeu _jeu) { 
+        super(_jeu);    
+    }
     
+    @Override
+    public boolean traversable() {
+        return false;
+    }
 }

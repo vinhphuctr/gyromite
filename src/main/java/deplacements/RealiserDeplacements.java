@@ -3,20 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package plateau;
+package deplacements;
 
 /**
  *
  * @author Epulapp
  */
-public class SolVertical extends EntiteStatique {
-
-    public SolVertical(Jeu _jeu) { 
-        super(_jeu);
-    }
+public abstract class RealiserDeplacements {
+    public abstract boolean deplacer();
     
-    @Override
-    public boolean traversable() {
-        return false;
-    }
 }

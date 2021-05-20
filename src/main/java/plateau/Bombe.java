@@ -9,6 +9,14 @@ package plateau;
  *
  * @author Epulapp
  */
-public class Bombe {
-    
+public class Bombe extends EntiteStatique {
+
+    public Bombe(Jeu _jeu) { 
+        super(_jeu);
+    }
+
+    @Override
+    public boolean traversable(){
+        return true;
+    }
 }

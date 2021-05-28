@@ -10,7 +10,7 @@ package plateau;
  * @author Epulapp
  */
 public abstract class Entite {
-     protected Jeu jeu;
+    protected Jeu jeu;
     
     public Entite(Jeu _jeu) {
         jeu = _jeu;

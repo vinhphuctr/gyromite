@@ -10,11 +10,9 @@ package plateau;
  * @author Epulapp
  */
 public class Professeur extends EntiteDynamique {
-    private int x, y;
-    public Jeu jeu;
-    
+    private int x, y;    
     public Professeur(Jeu _jeu, int _x, int _y) {
-        jeu = _jeu;
+        super(_jeu);
         x = _x;
         y = _y;
     }
@@ -32,7 +30,7 @@ public class Professeur extends EntiteDynamique {
             x ++;
         }
     }
-
+    
     public void gauche() {
         if (traversable(x-1, y)) {
             x --;

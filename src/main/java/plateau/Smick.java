@@ -11,12 +11,11 @@ package plateau;
  */
 public class Smick extends EntiteDynamique {
     private int x, y;
-    private Jeu jeu;
-     
+    
     public Smick(Jeu _jeu, int _x, int _y) {
-        jeu = _jeu;
-        x = _x;
-        y = _y;
+        super(_jeu);
+        this.x = x;
+        this.y = y;
     }
     
     public int getX() { return x; }
@@ -47,7 +46,7 @@ public class Smick extends EntiteDynamique {
     }
 
     private boolean traversable(int x, int y) {
-        if (x >0 && x < jeu.SIZE_X && y > 0 && y < jeu.SIZE_Y) {
+        if (x >0 && x < Jeu.SIZE_X && y > 0 && y < Jeu.SIZE_Y) {
             return jeu.getEntite(x, y).traversable();
         } else {
             return false;

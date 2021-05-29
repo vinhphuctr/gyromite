@@ -20,8 +20,12 @@ public abstract class EntiteDynamique extends Entite {
     public boolean peutEtreRamasser(){
         return false;
     };
+        
+    public boolean deplacerVersLa(Direction d) {
+        return jeu.deplacerEntite(this, d);
+    };
     
-    public boolean vivant=true;
-    
-    public void deplacer(Direction d) {};
+    public Entite regarderDansLaDirection(Direction d) {
+        return jeu.regarderDansLaDirection(this, d);
+    }
 }

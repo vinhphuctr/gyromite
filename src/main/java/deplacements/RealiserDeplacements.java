@@ -5,11 +5,22 @@
  */
 package deplacements;
 
+import java.util.ArrayList;
+import plateau.EntiteDynamique;
+
 /**
  *
  * @author Epulapp
  */
 public abstract class RealiserDeplacements {
-    public abstract boolean deplacer();
+    protected ArrayList<EntiteDynamique> entitesDynamiques = new ArrayList<>();
+    protected abstract boolean realisationDeplacement();
     
+    public void ajouterEntiteDynamique(EntiteDynamique ed) {
+        entitesDynamiques.add(ed);
+    }
+    
+    public void supprimerEntiteDynamique(EntiteDynamique ed) {
+        entitesDynamiques.remove(ed);
+    }
 }

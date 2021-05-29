@@ -5,15 +5,28 @@
  */
 package deplacements;
 
+import static deplacements.Direction.bas;
+import plateau.EntiteDynamique;
+import plateau.Entite;
+
 /**
  *
  * @author Epulapp
  */
 public class Gravite extends RealiserDeplacements {
-
+    
     @Override
-    public boolean deplacer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    protected boolean realisationDeplacement() {
+        boolean tomber = false;
+        
+        for (EntiteDynamique ed: entitesDynamiques) {
+            Entite eBas = ed.regarderDansLaDirection(bas);
+            if (eBas==null || (eBas!=null && !eBas.peutServirDeSupport())) {
+                if (ed.deplacerVersLa(bas))
+                    tomber = true;
+            }
+        }
+        return tomber;
     }
     
 }

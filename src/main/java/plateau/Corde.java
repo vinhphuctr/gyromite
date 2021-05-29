@@ -18,4 +18,7 @@ public class Corde extends EntiteStatique{
     public boolean traversable() {
         return true;
     }
+    
+    @Override
+    public boolean peutPermettreDeMonterDescendre() { return true; }
 }

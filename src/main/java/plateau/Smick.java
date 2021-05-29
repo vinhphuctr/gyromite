@@ -10,15 +10,16 @@ package plateau;
  * @author Epulapp
  */
 public class Smick extends EntiteDynamique {
-    private int x, y;
+    private int id;
     
-    public Smick(Jeu _jeu, int _x, int _y) {
+    public Smick(Jeu _jeu, int _id) {
         super(_jeu);
+        /*this.id = _id;
         this.x = x;
-        this.y = y;
+        this.y = y;*/
     }
     
-    public int getX() { return x; }
+    /*public int getX() { return x; }
     public int getY() { return y; }
     
     public void droite() {
@@ -51,7 +52,7 @@ public class Smick extends EntiteDynamique {
         } else {
             return false;
         }
-    }
+    }*/
     
     @Override
     public boolean peutEtreEcrase() { return true; }

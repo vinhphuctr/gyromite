@@ -10,14 +10,13 @@ package plateau;
  * @author Epulapp
  */
 public class Professeur extends EntiteDynamique {
-    private int x, y;    
-    public Professeur(Jeu _jeu, int _x, int _y) {
+    public Professeur(Jeu _jeu) {
         super(_jeu);
-        x = _x;
-        y = _y;
+        //x = _x;
+        //y = _y;
     }
     
-    public int getX() {
+    /*public int getX() {
         return x;
     }
 
@@ -55,14 +54,14 @@ public class Professeur extends EntiteDynamique {
         } else {
             return false;
         }
-    }
+    }*/
     
     
     @Override
     public boolean peutEtreEcrase() { return true; }
     
     @Override
-    public boolean peutServirDeSupport() { return false; }
+    public boolean peutServirDeSupport() { return true; }
     
     @Override
     public boolean peutPermettreDeMonterDescendre() { return false; };
